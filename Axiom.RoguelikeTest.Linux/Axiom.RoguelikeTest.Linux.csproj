@@ -55,15 +55,19 @@
   <ItemGroup>
     <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\2x2Floor-b.xnb">
       <Link>Content\2x2Floor-b.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\door.xnb">
       <Link>Content\door.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\floor.xnb">
       <Link>Content\floor.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\wall.xnb">
       <Link>Content\wall.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\player.xnb">
       <Link>Content\player.xnb</Link>
