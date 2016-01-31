@@ -170,7 +170,7 @@ namespace Axiom.RoguelikeTest
 							spriteBatch.Draw (_wallTex, position, null, null, null, 0f, Vector2.One, Color.White, SpriteEffects.None, LayerDepth.Cells);
 							break;
 						case TileType.RoomFloor:
-							spriteBatch.Draw (_floorTex, position, null, null, null, 0f, Vector2.One, Color.White, SpriteEffects.None, LayerDepth.Cells);
+							spriteBatch.Draw (_floorTex, position, null, null, null, 0f, Vector2.One, Color.Beige, SpriteEffects.None, LayerDepth.Cells);
 							break;
 						case TileType.Door:
 							spriteBatch.Draw (_doorTex, position, null, null, null, 0f, Vector2.One, Color.White, SpriteEffects.None, LayerDepth.Cells);
