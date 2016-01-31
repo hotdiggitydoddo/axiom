@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -14,9 +14,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)LayerDepth.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Content\2x2Floor-b.xnb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Content Include="$(MSBuildThisFileDirectory)Content\door.xnb" />
+    <Content Include="$(MSBuildThisFileDirectory)Content\floor.xnb" />
+    <Content Include="$(MSBuildThisFileDirectory)Content\wall.xnb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\player.xnb" />
   </ItemGroup>
 </Project>

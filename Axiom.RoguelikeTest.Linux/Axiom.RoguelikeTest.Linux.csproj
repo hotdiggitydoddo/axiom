@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,28 +53,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Icon.png" />
-    <None Include="packages.config" />
-    <None Include="..\Axiom.RoguelikeTest\Content\bin\Windows\door.xnb">
+    <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\2x2Floor-b.xnb">
+      <Link>Content\2x2Floor-b.xnb</Link>
+    </Content>
+    <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\door.xnb">
       <Link>Content\door.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Axiom.RoguelikeTest\Content\bin\Windows\floor.xnb">
+    </Content>
+    <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\floor.xnb">
       <Link>Content\floor.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Axiom.RoguelikeTest\Content\bin\Windows\player.xnb">
+    </Content>
+    <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\wall.xnb">
+      <Link>Content\wall.xnb</Link>
+    </Content>
+    <Content Include="..\Axiom.RoguelikeTest\Content\bin\Windows\player.xnb">
       <Link>Content\player.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Axiom.RoguelikeTest\Content\bin\Windows\tiles-24x24.xnb">
-      <Link>Content\tiles-24x24.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\Axiom.RoguelikeTest\Content\bin\Windows\wall.xnb">
-      <Link>Content\wall.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <None Include="Icon.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\Axiom.RoguelikeTest\Axiom.RoguelikeTest.projitems" Label="Shared" Condition="Exists('..\Axiom.RoguelikeTest\Axiom.RoguelikeTest.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -87,9 +83,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Axiom.RoguelikeLib\Axiom.RoguelikeLib.csproj">
       <Project>{154FECA1-D1BF-404D-89CF-90AE9C2DDB7A}</Project>
