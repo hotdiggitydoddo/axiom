@@ -1,20 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Axiom.Core
 {
-    public abstract class Component
+    public abstract class Component : IComparable<Component>
     {
-        public Entity Owner { get; set; }
+        public bool Alive { get; set; }
+        public Entity Entity { get; set; }
+        public int Priority { get; protected set; }
 
-        public virtual bool OkMessage(Message message) { return true; }
-    }
+        public int CompareTo(Component other)
+        {
+            return other.Priority.CompareTo(Priority);
+        }
 
-    public interface IUpdateable
-    {
-        void Update(double dt);
+        public abstract void FireEvent(Event e);
+
+        public virtual void Init(Entity e)
+        {
+            Entity = e;
+            Alive = true;
+        }
+
+        public virtual void Update(float dt) { }
     }
 }

@@ -10,7 +10,7 @@ namespace Axiom.RoguelikeLib
 		// Construct a new Camera class with standard zoom (no scaling)
 		public Camera()
 		{
-			Zoom = 1.0f;
+			Zoom = .5f;
 		}
 
 		public Level Level { get; set; }

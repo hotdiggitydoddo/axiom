@@ -93,9 +93,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Axiom.Core\Axiom.Core.csproj">
-      <Project>{d128f9bd-a2cf-4bfe-bc1d-325a7eedb685}</Project>
-      <Name>Axiom.Core</Name>
+    <ProjectReference Include="..\..\..\Visual Studio 2015\Projects\Zenith\Zenith.Core\Zenith.Core.csproj">
+      <Project>{de16f2e2-ed23-4cdc-b159-0485a8dcf280}</Project>
+      <Name>Zenith.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Axiom.RoguelikeLib\Axiom.RoguelikeLib.csproj">
       <Project>{154feca1-d1bf-404d-89cf-90ae9c2ddb7a}</Project>

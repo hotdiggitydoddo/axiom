@@ -9,9 +9,16 @@
     <Import_RootNamespace>Axiom.RoguelikeTest</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Components\KeyboardInputComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\PhysicsComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\RTComponentType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\SpatialComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\SpriteComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RoguelikeTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LayerDepth.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RTWorld.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Subsystems\SpriteRendererSubsystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)Content\2x2Floor-b.xnb" />

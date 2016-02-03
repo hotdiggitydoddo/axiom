@@ -1,6 +1,5 @@
 ﻿#region Using Statements
 using System;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
@@ -25,8 +24,13 @@ namespace Axiom.RoguelikeTest
 		private Texture2D _doorTex;
 
 		private GameObject _player;
+
+	    private GameObject _testGO;
+
 		private InputState _inputState;
 		private Level _level;
+
+	    private RTWorld _world;
 
 		public RoguelikeGame ()
 		{
@@ -37,7 +41,11 @@ namespace Axiom.RoguelikeTest
 			Content.RootDirectory = "Content";	            
 			//graphics.IsFullScreen = true;
 			_inputState = new InputState ();
+            _testGO = new GameObject();
+            //_testGO.AttachComponent(new SpatialComponent(Vector2.One));
 
+
+            
 		}
 
 		/// <summary>
@@ -51,6 +59,8 @@ namespace Axiom.RoguelikeTest
 			// TODO: Add your initialization logic here
 			Level.Camera.ViewportWidth = 1280;
 			Level.Camera.ViewportHeight = 720;
+
+
 			base.Initialize ();
 
 		}
@@ -83,6 +93,14 @@ namespace Axiom.RoguelikeTest
 			Level.Camera.SpriteHeight = 64;
 
 			Level.Camera.CenterOn (emptyTile);
+
+            _world = new RTWorld(5, spriteBatch);
+            var entity = _world.CreateEntity();
+
+            _world.EntityMasks[entity].ClearAll();
+            _world.SpatialComponents[entity].Position = new Vector2(50, 50);
+		    _world.SpriteComponents[entity].Texture = _playerTex;
+		    _world.SpriteComponents[entity].Tint = Color.Red;
 		}
 
 		/// <summary>
@@ -196,6 +214,8 @@ namespace Axiom.RoguelikeTest
 			}
 
 			spriteBatch.Draw (_playerTex, new Vector2 (_level.Player.Position.X * multiplier, _level.Player.Position.Y * multiplier), null, null, null, 0f, new Vector2 (scale, scale), Color.White, SpriteEffects.None, LayerDepth.Cells);
+
+            _world.Render();
 
 			spriteBatch.End ();
 

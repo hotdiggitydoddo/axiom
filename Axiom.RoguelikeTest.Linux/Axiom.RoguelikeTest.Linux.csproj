@@ -89,13 +89,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Visual Studio 2015\Projects\Zenith\Zenith.Core\Zenith.Core.csproj">
+      <Project>{de16f2e2-ed23-4cdc-b159-0485a8dcf280}</Project>
+      <Name>Zenith.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Axiom.RoguelikeLib\Axiom.RoguelikeLib.csproj">
       <Project>{154FECA1-D1BF-404D-89CF-90AE9C2DDB7A}</Project>
       <Name>Axiom.RoguelikeLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Axiom.Core\Axiom.Core.csproj">
-      <Project>{D128F9BD-A2CF-4BFE-BC1D-325A7EEDB685}</Project>
-      <Name>Axiom.Core</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
